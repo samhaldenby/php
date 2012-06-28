@@ -7,6 +7,14 @@ for switching apache on/off, use 'sudo /etc/init.d/apache2 stop/restart'
 
 CHECK THAT php5.conf is in /etc/apache2/mods-enabled/ and get rid of last IF with commenting
 
+Something like this should be in your httpd.conf
+
+<IfModule php5_module>
+    AddType application/x-httpd-php .php .php5
+
+    ...
+</IfModule>
+
 
 or, to get sql in there too, https://help.ubuntu.com/community/ApacheMySQLPHP
 

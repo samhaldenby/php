@@ -62,4 +62,27 @@ class node {
     	
 }
 
+class nodeStore{
+
+	private nodes = array();
+	private nextNodeId = 0;
+	
+	function add_node($node){
+		$this->nodes[$this->nextNodeId] = $node;
+		$this->nextNodeId++;
+	}
+	
+	function has_node($queryId){
+		return array_key_exists($queryId, $this->nodes);
+	}
+	
+	function get_node($queryId){
+		if (array_key_exists($queryId, $this->nodes) == True){
+			return $this->nodes[$queryId];
+		} else {
+			return NULL;
+		}
+	}
+	
+
 ?>
