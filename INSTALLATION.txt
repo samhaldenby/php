@@ -1,0 +1,13 @@
+*get files
+
+http://www.howtogeek.com/howto/ubuntu/installing-php5-and-apache-on-ubuntu/
+
+locations for php files = /var/www/
+for switching apache on/off, use 'sudo /etc/init.d/apache2 stop/restart'
+
+CHECK THAT php5.conf is in /etc/apache2/mods-enabled/ and get rid of last IF with commenting
+
+
+or, to get sql in there too, https://help.ubuntu.com/community/ApacheMySQLPHP
+
+tutorial on getting mySQL up and running http://www.freewebmasterhelp.com/tutorials/phpmysql/2
