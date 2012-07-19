@@ -1,10 +1,5 @@
 <?php include ('mysql_helper_functions.php');
-session_start();
-
-#Check that the user should actually be here!
-if($_SESSION['login']==""){
-	header("Location:login_user.php");
-}
+verify_session();
 
 #grab user details
 $dbh = get_db_handle();
@@ -15,3 +10,17 @@ $uFirstName = $userInfo['firstName'];
 <?php
 print "SessionId:".$_SESSION['login'];
 ?>
+
+
+<!-- Create New Node Button -->
+ <form method="LINK" action="create_node.php">
+   <input type="submit" value="Create Node">
+ </form>
+ 
+<!-- Search For Node Button -->
+<form method="LINK" action="search_for_node.php">
+  <input type="submit" value="Search">
+</form>
+
+
+

@@ -34,4 +34,12 @@ function get_db_handle(){
 	}
 }
 
+function verify_session(){
+	session_start();
+	#Check that the user should actually be here!
+	if($_SESSION['login']==""){
+		header("Location:login_user.php");
+	}
+}
+
 ?>

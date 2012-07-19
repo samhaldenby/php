@@ -30,11 +30,7 @@
 		
 				#retrieve userId
 				$id = retrieve_variable($dbh, 'loginInfo', $_POST['userName'], 'userName', 'userId');
-				#$stmt = $dbh->prepare("SELECT * FROM loginInfo WHERE userName=:userName");
-				#$stmt->bindParam(':userName', $name);
-				#$stmt->execute();
-				#$result = $stmt->fetch(PDO::FETCH_ASSOC);
-				#$id = $result['userId'];
+
 
 				#Add user details to userInfo table
 				$stmt = $dbh->prepare("INSERT INTO userInfo (firstName, middleName, lastName, userId) VALUES (:firstName, :middleName, :lastName, :userId)");

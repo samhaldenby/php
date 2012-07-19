@@ -19,3 +19,5 @@ Something like this should be in your httpd.conf
 or, to get sql in there too, https://help.ubuntu.com/community/ApacheMySQLPHP
 
 tutorial on getting mySQL up and running http://www.freewebmasterhelp.com/tutorials/phpmysql/2
+
+* To dump database in .gz: sudo mysqldump -u root -p  --databases samsDb | gzip > ./samsDb_sql.gz
